@@ -7,16 +7,12 @@ namespace Spiral
 {
 
     public static class Spiral
-    {        /// <summary>
-             /// Takes a Two Dimensional Array and does a Clockwise spiral on it
-             /// </summary>
-             /// <param name="TDArray">Must be a Two Dimensional Array</param>
-
-             /// <summary>
-             /// Takes a Two Dimensional Array and does a Clockwise spiral on it
-             /// </summary>
-             /// <param name="TDArray">Must be a Two Dimensional Array</param>
-             /// <returns> List<int> </returns>
+    {
+        /// <summary>
+        /// Takes a Two Dimensional Array and does a Clockwise spiral on it
+        /// </summary>
+        /// <param name="TDArray">Must be a Two Dimensional Array</param>
+        /// <returns> List<int> </returns>
         public static List<int> SpiralIt(int[,] TDArray)
         {
             int rsi = 0; // Row Start Index 
@@ -68,12 +64,13 @@ namespace Spiral
                                           { 5, 6, 7, 8  },
                                           { 9, 10,11,12 },
                                           {13, 14,15,16 } };
+
             string expectedData = "1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10";
 
-            List<int> mySpiralList = Spiral.SpiralIt(array);
+            List<int> spiralList = Spiral.SpiralIt(array);
 
             // Convert to a string for easy printing and testing
-            string actualData = string.Join(" ", mySpiralList.ToArray());
+            string actualData = string.Join(" ", spiralList.ToArray());
 
             Console.WriteLine(actualData);
 
